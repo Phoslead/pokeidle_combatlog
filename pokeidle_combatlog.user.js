@@ -543,6 +543,22 @@
                             startSessionTimer();
                         }
 
+                        if (packet.heroName) {
+                            let matchedId = null;
+                            for (const id in pokemonNameMap) {
+                                if (pokemonNameMap[id] === packet.heroName) {
+                                    matchedId = id;
+                                    const details = pokemonDetailsMap[id];
+                                    if (details && details.stats && details.stats.hp === packet.heroMaxHp) {
+                                        break;
+                                    }
+                                }
+                            }
+                            if (matchedId && matchedId !== activePokeId) {
+                                activePokeId = matchedId;
+                            }
+                        }
+
                         const currentPoke = registerActiveCombatPoke(activePokeId);
                         const timerTimeStr = getFormattedTimerTime();
 
