@@ -28,7 +28,9 @@ Un userscript avanzado de calidad de vida que añade un registro de combate (com
 ### Copiar or Exportar JSON
 <img width="510" height="882" alt="image" src="https://github.com/user-attachments/assets/d6e76a69-4ada-4ec6-8416-ed72c12b1305" />
 
+
 <img width="477" height="144" alt="image" src="https://github.com/user-attachments/assets/500ff655-9e64-461d-822a-a9db3b99bc79" />
+
 ---
 
 ## 📖 Cómo Usar
