@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - La ventana principal del Combat Log ahora reduce su ancho al estar minimizada para ahorrar espacio en pantalla.
 - Se ha eliminado el mensaje de confirmación al resetear las estadísticas (ya no pausa el juego).
 - El HUD ahora se mantiene siempre dentro de los límites de la pantalla (al arrastrarlo o al maximizarlo).
+- Se ha añadido lógica para empujar el HUD de forma automática hacia la zona visible si aumenta de tamaño (por ejemplo, al iniciar un combate) estando al borde de la pantalla.
 
 ## [1.9] - 2026-08-07
 ### Added

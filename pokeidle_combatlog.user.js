@@ -280,6 +280,24 @@
         document.body.appendChild(hud);
 
         makeElementDraggable(hud, document.getElementById('cl-header'));
+        
+        const constrainHUD = () => {
+            let newLeft = hud.offsetLeft;
+            let newTop = hud.offsetTop;
+            const maxLeft = window.innerWidth - hud.offsetWidth;
+            const maxTop = window.innerHeight - hud.offsetHeight;
+            let changed = false;
+            if (newLeft > maxLeft) { newLeft = Math.max(0, maxLeft); changed = true; }
+            if (newTop > maxTop) { newTop = Math.max(0, maxTop); changed = true; }
+            if (changed) {
+                hud.style.left = newLeft + 'px';
+                hud.style.top = newTop + 'px';
+            }
+        };
+
+        const resizeObserver = new ResizeObserver(constrainHUD);
+        resizeObserver.observe(hud);
+        window.addEventListener('resize', constrainHUD);
 
         document.getElementById('cl-export-json').addEventListener('click', () => {
             const exportData = buildExportDataObject();
@@ -339,15 +357,6 @@
                 if (actions) actions.style.display = 'flex';
                 if (hud) hud.style.width = '440px';
                 e.target.textContent = '➖';
-                
-                if (hud) {
-                    let newLeft = hud.offsetLeft;
-                    let newTop = hud.offsetTop;
-                    const maxLeft = window.innerWidth - hud.offsetWidth;
-                    const maxTop = window.innerHeight - hud.offsetHeight;
-                    if (newLeft > maxLeft) hud.style.left = Math.max(0, maxLeft) + 'px';
-                    if (newTop > maxTop) hud.style.top = Math.max(0, maxTop) + 'px';
-                }
             } else {
                 panel.style.display = 'none';
                 if (actions) actions.style.display = 'none';
