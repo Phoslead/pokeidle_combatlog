@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PokeIdle Combat Log
+// @name         PokeIdle Combat Log 1.7
 // @namespace    http://tampermonkey.net/
 // @version      1.7
 // @author       Phoslead
