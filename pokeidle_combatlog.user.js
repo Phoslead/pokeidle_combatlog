@@ -540,7 +540,7 @@
                         }
                     }
 
-                    if (packet.type === 'field' && ( (packet.hits && packet.hits.length > 0) || (packet.bossCinematic && packet.bossCinematicDmg) )) {
+                    if (packet.type === 'field' && ((packet.hits && packet.hits.length > 0) || packet.bossCinematic !== undefined)) {
 
                         if (!sessionStarted) {
                             startSessionTimer();
@@ -604,19 +604,22 @@
                                 }
                             });
 
-                            if (packet.bossCinematic && packet.bossCinematicDmg) {
-                                currentPoke.taken += packet.bossCinematicDmg;
-                                currentPoke.takenHitsCount++;
-                                totalTakenAll += packet.bossCinematicDmg;
+                            if (packet.bossCinematic) {
+                                const cinematicDmg = Number(packet.bossCinematicDmg) || 0;
+                                if (cinematicDmg > 0) {
+                                    currentPoke.taken += cinematicDmg;
+                                    currentPoke.takenHitsCount++;
+                                    totalTakenAll += cinematicDmg;
 
-                                currentPoke.history.push({
-                                    timerTime: timerTimeStr,
-                                    //timestamp: Date.now(),
-                                    type: 'taken',
-                                    move: packet.bossCinematic,
-                                    moveType: 'BOSS',
-                                    amount: packet.bossCinematicDmg
-                                });
+                                    currentPoke.history.push({
+                                        timerTime: timerTimeStr,
+                                        //timestamp: Date.now(),
+                                        type: 'taken',
+                                        move: packet.bossCinematic,
+                                        moveType: 'BOSS',
+                                        amount: cinematicDmg
+                                    });
+                                }
                             }
                         }
 
