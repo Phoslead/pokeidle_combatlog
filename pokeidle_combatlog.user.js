@@ -834,6 +834,4 @@
             return ws;
         }
     });
-
-    window.WebSocket.prototype = OriginalWebSocket.prototype;
 })();
