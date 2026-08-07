@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         PokeIdle Combat Log 1.7
+// @name         PokeIdle Combat Log 1.8
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.8
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
