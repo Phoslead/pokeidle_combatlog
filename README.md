@@ -17,25 +17,7 @@ An advanced quality-of-life userscript that adds a combat log, session timer, an
 
 ---
 ## 📸 Preview & Screenshots
-<figure>
-  <img width="926" height="722" alt="image" src="https://github.com/user-attachments/assets/4c50d08c-4f96-45e2-884b-62b5055c101e" />
-  <figcaption>Wild Hunt</figcaption>
-</figure>
-
-<figure>
-  <img width="1007" height="652" alt="overview" src="https://github.com/user-attachments/assets/8b12d444-199f-43f7-9a43-3df955fcd433" />
-  <figcaption>Registro automático de cambio de pokemon</figcaption>
-</figure>
-
-<figure>
-  <img width="1213" height="808" alt="boss_battle_04" src="https://github.com/user-attachments/assets/9ace061b-a7e4-4d89-a102-fa1efa36cc81" />
-  <figcaption>Batalla contra el jefe</figcaption>
-</figure>
-
-<figure>
-  <img width="510" height="882" alt="image" src="https://github.com/user-attachments/assets/d6e76a69-4ada-4ec6-8416-ed72c12b1305" />
-  <figcaption>Formato de JSON para análisis</figcaption>
-</figure>
+*(Screenshots to be added)*
 
 ---
 
