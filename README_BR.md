@@ -75,22 +75,4 @@ Se o link automático não acionar seu gerenciador de scripts, siga estes passos
 5. Salve o script (**Ctrl + S** ou `Arquivo -> Salvar`).
 6. Recarregue a aba do jogo.
 
----
 
-### Opção 3: Launchers de Desktop (ex., [PokeGrid](https://github.com/soufoka/PokeGrid-source))
-
-Se você estiver jogando através de um launcher de desktop dedicado como **PokeGrid** que inclui um gerenciador de scripts personalizado, você deve fazer um pequeno ajuste no código do script para garantir a compatibilidade e a proteção de dados.
-
-1. Cole o script no gerenciador de scripts do launcher.
-2. No topo do script, encontre estas duas linhas no cabeçalho (se houver):
-   ```javascript
-   // @grant        GM_getValue
-   // @grant        GM_setValue
-   ```
-3. Mude para:
-   ```javascript
-   // @grant        none
-   ```
-4. **Salve e recarregue.**
-
----

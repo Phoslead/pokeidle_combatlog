@@ -74,23 +74,3 @@ If the automatic link does not trigger your script manager, follow these steps:
 4. Paste the code inside the Tampermonkey script editor, replacing any default template text.
 5. Save the script (**Ctrl + S** or `File -> Save`).
 6. Refresh the game tab.
-
----
-
-### Option 3: Desktop Launchers (e.g., [PokeGrid](https://github.com/soufoka/PokeGrid-source))
-
-If you are playing via a dedicated desktop launcher like **PokeGrid** that includes a custom script manager, you must make a minor adjustment to the script code to ensure compatibility and data protection.
-
-1. Paste the script into the launcher's script manager.
-2. At the very top of the script, find these two lines in the header (if present):
-   ```javascript
-   // @grant        GM_getValue
-   // @grant        GM_setValue
-   ```
-3. Change them to:
-   ```javascript
-   // @grant        none
-   ```
-4. **Save and reload.**
-
----

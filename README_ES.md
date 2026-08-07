@@ -75,22 +75,4 @@ Si el enlace automático no activa tu gestor de scripts, sigue estos pasos:
 5. Guarda el script (**Ctrl + S** o `Archivo -> Guardar`).
 6. Refresca la pestaña del juego.
 
----
 
-### Opción 3: Launchers de Escritorio (ej., [PokeGrid](https://github.com/soufoka/PokeGrid-source))
-
-Si estás jugando a través de un launcher de escritorio dedicado como **PokeGrid** que incluye un gestor de scripts personalizado, debes hacer un pequeño ajuste en el código del script para asegurar la compatibilidad y la protección de datos.
-
-1. Pega el script en el gestor de scripts del launcher.
-2. En la parte superior del script, encuentra estas dos líneas en el encabezado (si las hay):
-   ```javascript
-   // @grant        GM_getValue
-   // @grant        GM_setValue
-   ```
-3. Cámbialas a:
-   ```javascript
-   // @grant        none
-   ```
-4. **Guarda y recarga.**
-
----
