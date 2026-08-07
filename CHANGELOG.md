@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.10] - 2026-08-07
+### Changed
+- Los botones de acción (Copiar, Guardar, Reset) ahora se ocultan al minimizar el Combat Log.
+
 ## [1.9] - 2026-08-07
 ### Added
 - Added a minimize button (`➖`) to the Combat Log HUD to allow hiding the stats panel while not in combat or while in the city.

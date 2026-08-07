@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         PokeIdle Combat Log 1.8
+// @name         PokeIdle Combat Log 1.10
 // @namespace    http://tampermonkey.net/
-// @version      1.9
+// @version      1.10
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -254,7 +254,7 @@
                     <span id="cl-minimize-btn" style="cursor: pointer; margin-right: 6px; opacity: 0.8;" title="Minimizar">➖</span>
                     <span>⚔️ COMBAT LOG</span>
                 </div>
-                <div style="display: flex; gap: 4px; align-items: center;">
+                <div id="cl-actions-container" style="display: flex; gap: 4px; align-items: center;">
                     <button id="cl-copy-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Copiar datos al portapapeles">
                         📋 Copiar
                     </button>
@@ -334,11 +334,14 @@
 
         document.getElementById('cl-minimize-btn').addEventListener('click', (e) => {
             const panel = document.getElementById('combat-stats-panel');
+            const actions = document.getElementById('cl-actions-container');
             if (panel.style.display === 'none') {
                 panel.style.display = 'block';
+                if (actions) actions.style.display = 'flex';
                 e.target.textContent = '➖';
             } else {
                 panel.style.display = 'none';
+                if (actions) actions.style.display = 'none';
                 e.target.textContent = '➕';
             }
         });
