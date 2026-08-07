@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2] - 2026-08-06
+## [1.3] - 2026-08-06
 ### Fixed
 - Boss cinematic attacks (like `poisonburst`, `tentacleslap`) which deal massive damage are now properly captured and registered in the combat log as damage taken.
 

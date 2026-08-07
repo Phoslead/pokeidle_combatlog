@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.4
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -93,6 +93,7 @@
 
     let activePokeId = 'default';
     let playerTeamIds = [];
+    let debugPackets = [];
 
     const pokeStats = {};
     let totalDealtAll = 0;
@@ -180,6 +181,7 @@
     function resetAllCombatData(reason = 'Estadísticas reiniciadas.') {
         totalDealtAll = 0;
         totalTakenAll = 0;
+        debugPackets = [];
         for (const key in pokeStats) {
             delete pokeStats[key];
         }
@@ -249,6 +251,7 @@
                     <button id="cl-export-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Guardar como archivo .json">
                         💾 Guardar
                     </button>
+                    <span id="cl-debug-btn" style="color: #f39c12; cursor: pointer; font-size: 10px; margin-left: 6px; font-weight: bold;" title="Descargar log de Websocket">[Debug]</span>
                     <span id="cl-reset-stats" style="cursor: pointer; opacity: 0.8; color: #ffca28; font-size: 10px; margin-left: 4px;">[Reset Stats]</span>
                 </div>
             </div>
@@ -270,6 +273,21 @@
 
         document.getElementById('cl-reset-stats').addEventListener('click', () => {
             resetAllCombatData('Reset manual por usuario.');
+        });
+
+        document.getElementById('cl-debug-btn').addEventListener('click', () => {
+            if (debugPackets.length === 0) {
+                alert('No hay paquetes registrados en este combate.');
+                return;
+            }
+            const text = debugPackets.map(p => `[${p.time}] ${p.data}`).join('\\n');
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `pokeidle_debug_${Date.now()}.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
         });
 
         document.getElementById('cl-copy-json').addEventListener('click', () => {
@@ -485,6 +503,12 @@
             });
 
             ws.addEventListener('message', (event) => {
+                if (typeof event.data === 'string') {
+                    debugPackets.push({
+                        time: new Date().toISOString(),
+                        data: event.data
+                    });
+                }
                 try {
                     if (typeof event.data !== 'string') return;
                     const packet = JSON.parse(event.data);
