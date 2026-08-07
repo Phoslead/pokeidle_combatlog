@@ -1,0 +1,1056 @@
+{
+  "sessionDurationSeconds": 117,
+  "exportedAt": "2026-08-07T06:04:53.082Z",
+  "summary": {
+    "totalDamageDealt": 80512,
+    "totalDamageTaken": 64153
+  },
+  "pokemons": [
+    {
+      "id": "cmrzrbyfk22t06ts0kpzyl92q",
+      "name": "Tentacruel",
+      "level": 372,
+      "quality": 1.8,
+      "stats": {
+        "hp": 923,
+        "atk": 691,
+        "def": 566,
+        "spAtk": 774,
+        "spDef": 1024,
+        "speed": 1014
+      },
+      "totalDealt": 4905,
+      "totalTaken": 12763,
+      "dealtHitsCount": 13,
+      "avgDealtPerHit": 377,
+      "history": [
+        {
+          "timerTime": "+00:00:00",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 344,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:00",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 375,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:00",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 1291
+        },
+        {
+          "timerTime": "+00:00:02",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 348,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:04",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 790
+        },
+        {
+          "timerTime": "+00:00:04",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 368,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:06",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 784
+        },
+        {
+          "timerTime": "+00:00:06",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 402,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:06",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 367,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:06",
+          "type": "taken",
+          "move": "poisonburst",
+          "moveType": "BOSS",
+          "amount": 3837
+        },
+        {
+          "timerTime": "+00:00:08",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 355,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:08",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 748
+        },
+        {
+          "timerTime": "+00:00:10",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 403,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:10",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 775
+        },
+        {
+          "timerTime": "+00:00:12",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 386,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:12",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 1257
+        },
+        {
+          "timerTime": "+00:00:14",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 403,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:14",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 367,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:14",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 733
+        },
+        {
+          "timerTime": "+00:00:15",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 397,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 705
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 390,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "taken",
+          "move": "deepsea",
+          "moveType": "BOSS",
+          "amount": 1843
+        }
+      ]
+    },
+    {
+      "id": "cmrykll0l8hv6xzzl7tiae0el",
+      "name": "Alakazam",
+      "level": 314,
+      "quality": 1.709,
+      "stats": {
+        "hp": 517,
+        "atk": 376,
+        "def": 381,
+        "spAtk": 805,
+        "spDef": 660,
+        "speed": 773
+      },
+      "totalDealt": 2074,
+      "totalTaken": 6615,
+      "dealtHitsCount": 7,
+      "avgDealtPerHit": 296,
+      "history": [
+        {
+          "timerTime": "+00:00:18",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 283,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:20",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 301,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:20",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1226
+        },
+        {
+          "timerTime": "+00:00:21",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 289,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:22",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1078
+        },
+        {
+          "timerTime": "+00:00:23",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 320,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:24",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 2113
+        },
+        {
+          "timerTime": "+00:00:25",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 318,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:26",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 282,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1142
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 281,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:29",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1056
+        }
+      ]
+    },
+    {
+      "id": "cmrpjn9qn1zgw133j459wf1dh",
+      "name": "Gengar",
+      "level": 317,
+      "quality": 1.8,
+      "stats": {
+        "hp": 565,
+        "atk": 523,
+        "def": 416,
+        "spAtk": 842,
+        "spDef": 624,
+        "speed": 909
+      },
+      "totalDealt": 1245,
+      "totalTaken": 7540,
+      "dealtHitsCount": 3,
+      "avgDealtPerHit": 415,
+      "history": [
+        {
+          "timerTime": "+00:00:29",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 406,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 415,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:31",
+          "type": "taken",
+          "move": "poisonburst",
+          "moveType": "BOSS",
+          "amount": 6319
+        },
+        {
+          "timerTime": "+00:00:32",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 424,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:33",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1221
+        }
+      ]
+    },
+    {
+      "id": "cmrww1i0mgl9lovodhpkpd2e6",
+      "name": "Exeggutor",
+      "level": 466,
+      "quality": 1.762,
+      "stats": {
+        "hp": 1078,
+        "atk": 1063,
+        "def": 1034,
+        "spAtk": 1283,
+        "spDef": 770,
+        "speed": 774
+      },
+      "totalDealt": 10854,
+      "totalTaken": 17809,
+      "dealtHitsCount": 14,
+      "avgDealtPerHit": 775,
+      "history": [
+        {
+          "timerTime": "+00:00:34",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 761,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 769,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1027
+        },
+        {
+          "timerTime": "+00:00:37",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 793,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:37",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 1708
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 735,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 915
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 824,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:42",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 776,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:42",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1026
+        },
+        {
+          "timerTime": "+00:00:43",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 785,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:43",
+          "type": "taken",
+          "move": "deepsea",
+          "moveType": "BOSS",
+          "amount": 2320
+        },
+        {
+          "timerTime": "+00:00:46",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 764,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:46",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1032
+        },
+        {
+          "timerTime": "+00:00:48",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 767,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:48",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 899
+        },
+        {
+          "timerTime": "+00:00:48",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 827,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:49",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 737,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:49",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 1780
+        },
+        {
+          "timerTime": "+00:00:52",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 825,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:52",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 905
+        },
+        {
+          "timerTime": "+00:00:54",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 713,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:54",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 937
+        },
+        {
+          "timerTime": "+00:00:55",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 778,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:55",
+          "type": "taken",
+          "move": "poisonburst",
+          "moveType": "BOSS",
+          "amount": 5260
+        }
+      ]
+    },
+    {
+      "id": "cmsac0mks1l2iuwvgrhgo8qyd",
+      "name": "Tyranitar",
+      "level": 509,
+      "quality": 2.217,
+      "stats": {
+        "hp": 1692,
+        "atk": 1771,
+        "def": 1674,
+        "spAtk": 1453,
+        "spDef": 1540,
+        "speed": 1225
+      },
+      "totalDealt": 61434,
+      "totalTaken": 19426,
+      "dealtHitsCount": 34,
+      "avgDealtPerHit": 1807,
+      "history": [
+        {
+          "timerTime": "+00:00:55",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1878,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:57",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1917,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:57",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 459
+        },
+        {
+          "timerTime": "+00:00:58",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1921,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:59",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 457
+        },
+        {
+          "timerTime": "+00:01:00",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1892,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:01",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 836
+        },
+        {
+          "timerTime": "+00:01:02",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1854,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:03",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1662,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:03",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 512
+        },
+        {
+          "timerTime": "+00:01:05",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1767,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:05",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 454
+        },
+        {
+          "timerTime": "+00:01:06",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1727,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:07",
+          "type": "taken",
+          "move": "deepsea",
+          "moveType": "BOSS",
+          "amount": 1258
+        },
+        {
+          "timerTime": "+00:01:08",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1748,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:09",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 454
+        },
+        {
+          "timerTime": "+00:01:10",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1767,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:11",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1689,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:11",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 516
+        },
+        {
+          "timerTime": "+00:01:13",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1864,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:13",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 820
+        },
+        {
+          "timerTime": "+00:01:14",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1893,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:15",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 464
+        },
+        {
+          "timerTime": "+00:01:16",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1767,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:17",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 483
+        },
+        {
+          "timerTime": "+00:01:18",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1915,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:19",
+          "type": "taken",
+          "move": "poisonburst",
+          "moveType": "BOSS",
+          "amount": 2293
+        },
+        {
+          "timerTime": "+00:01:20",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1686,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:21",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1841,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:21",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 477
+        },
+        {
+          "timerTime": "+00:01:23",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1834,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:23",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 514
+        },
+        {
+          "timerTime": "+00:01:25",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1856,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:25",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 793
+        },
+        {
+          "timerTime": "+00:01:27",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1857,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:27",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 474
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1754,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:29",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1748,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:29",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 503
+        },
+        {
+          "timerTime": "+00:01:31",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1746,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:31",
+          "type": "taken",
+          "move": "deepsea",
+          "moveType": "BOSS",
+          "amount": 1277
+        },
+        {
+          "timerTime": "+00:01:33",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1740,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:33",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 472
+        },
+        {
+          "timerTime": "+00:01:35",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1831,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:35",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 509
+        },
+        {
+          "timerTime": "+00:01:36",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1689,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:37",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1773,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:37",
+          "type": "taken",
+          "move": "tentacleslap",
+          "moveType": "BOSS",
+          "amount": 828
+        },
+        {
+          "timerTime": "+00:01:39",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1670,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:39",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 463
+        },
+        {
+          "timerTime": "+00:01:41",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1889,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:41",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 485
+        },
+        {
+          "timerTime": "+00:01:43",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1839,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:43",
+          "type": "taken",
+          "move": "poisonburst",
+          "moveType": "BOSS",
+          "amount": 2621
+        },
+        {
+          "timerTime": "+00:01:44",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1869,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:46",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1923,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:46",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 510
+        },
+        {
+          "timerTime": "+00:01:47",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1835,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:48",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 494
+        },
+        {
+          "timerTime": "+00:01:48",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1793,
+          "eff": 1
+        }
+      ]
+    }
+  ]
+}

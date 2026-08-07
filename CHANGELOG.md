@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.9] - 2026-08-07
+### Added
+- Added a minimize button (`➖`) to the Combat Log HUD to allow hiding the stats panel while not in combat or while in the city.
+
+### Changed
+- The `[Debug]` button and its associated logic have been commented out to keep the UI clean, but can be easily re-enabled for troubleshooting purposes.
+
 ## [1.8] - 2026-08-06
 ### Added
 - Added `@updateURL` and `@downloadURL` tags to the script header to allow Tampermonkey to automatically pull updates from the GitHub repository.

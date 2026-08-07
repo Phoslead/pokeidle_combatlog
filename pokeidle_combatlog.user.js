@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log 1.8
 // @namespace    http://tampermonkey.net/
-// @version      1.8
+// @version      1.9
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -95,7 +95,7 @@
 
     let activePokeId = 'default';
     let playerTeamIds = [];
-    let debugPackets = [];
+    // let debugPackets = [];
 
     const pokeStats = {};
     let totalDealtAll = 0;
@@ -188,7 +188,7 @@
     function resetAllCombatData(reason = 'Estadísticas reiniciadas.') {
         totalDealtAll = 0;
         totalTakenAll = 0;
-        debugPackets = [];
+        // debugPackets = [];
         for (const key in pokeStats) {
             delete pokeStats[key];
         }
@@ -250,7 +250,10 @@
 
         hud.innerHTML = `
             <div id="cl-header" style="background: #1a1a24; padding: 8px 10px; font-weight: bold; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; cursor: move;">
-                <span>⚔️ COMBAT LOG</span>
+                <div>
+                    <span id="cl-minimize-btn" style="cursor: pointer; margin-right: 6px; opacity: 0.8;" title="Minimizar">➖</span>
+                    <span>⚔️ COMBAT LOG</span>
+                </div>
                 <div style="display: flex; gap: 4px; align-items: center;">
                     <button id="cl-copy-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Copiar datos al portapapeles">
                         📋 Copiar
@@ -258,7 +261,7 @@
                     <button id="cl-export-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Guardar como archivo .json">
                         💾 Guardar
                     </button>
-                    <span id="cl-debug-btn" style="color: #f39c12; cursor: pointer; font-size: 10px; margin-left: 6px; font-weight: bold;" title="Descargar log de Websocket">[Debug]</span>
+                    <!-- <span id="cl-debug-btn" style="color: #f39c12; cursor: pointer; font-size: 10px; margin-left: 6px; font-weight: bold;" title="Descargar log de Websocket">[Debug]</span> -->
                     <span id="cl-reset-stats" style="cursor: pointer; opacity: 0.8; color: #ffca28; font-size: 10px; margin-left: 4px;">[Reset Stats]</span>
                 </div>
             </div>
@@ -278,16 +281,41 @@
 
         makeElementDraggable(hud, document.getElementById('cl-header'));
 
-        document.getElementById('cl-reset-stats').addEventListener('click', () => {
-            resetAllCombatData('Reset manual por usuario.');
+        document.getElementById('cl-export-json').addEventListener('click', () => {
+            const exportData = buildExportDataObject();
+            const jsonString = JSON.stringify(exportData, null, 2);
+
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const dateStr = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16);
+            const fileName = `pokeidle_combat_${dateStr}.json`;
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            const btn = document.getElementById('cl-export-json');
+            btn.textContent = '💾 Guardado';
+            btn.style.background = '#2e7d32';
+            setTimeout(() => {
+                btn.textContent = '💾 Guardar';
+                btn.style.background = '#2b5278';
+            }, 2000);
         });
 
+        /*
         document.getElementById('cl-debug-btn').addEventListener('click', () => {
             if (debugPackets.length === 0) {
                 alert('No hay paquetes registrados en este combate.');
                 return;
             }
-            const text = debugPackets.map(p => `[${p.time}] ${p.data}`).join('\\n');
+            const text = debugPackets.map(p => `[${p.time}] ${p.data}`).join('\n');
             const blob = new Blob([text], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -295,6 +323,24 @@
             a.download = `pokeidle_combatlog_debug_${Date.now()}.txt`;
             a.click();
             URL.revokeObjectURL(url);
+        });
+        */
+
+        document.getElementById('cl-reset-stats').addEventListener('click', () => {
+            if (confirm('¿Estás seguro de resetear las estadísticas de esta cacería?')) {
+                resetAllCombatData('Reinicio manual.');
+            }
+        });
+
+        document.getElementById('cl-minimize-btn').addEventListener('click', (e) => {
+            const panel = document.getElementById('combat-stats-panel');
+            if (panel.style.display === 'none') {
+                panel.style.display = 'block';
+                e.target.textContent = '➖';
+            } else {
+                panel.style.display = 'none';
+                e.target.textContent = '➕';
+            }
         });
 
         document.getElementById('cl-copy-json').addEventListener('click', () => {
@@ -514,12 +560,14 @@
             });
 
             ws.addEventListener('message', (event) => {
+                /*
                 if (typeof event.data === 'string') {
                     debugPackets.push({
                         time: new Date().toISOString(),
                         data: event.data
                     });
                 }
+                */
                 try {
                     if (typeof event.data !== 'string') return;
                     const packet = JSON.parse(event.data);
