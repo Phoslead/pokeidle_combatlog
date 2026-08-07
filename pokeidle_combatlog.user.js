@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -570,27 +570,25 @@
                             startSessionTimer();
                         }
 
+                        let newActiveId = activePokeId;
                         if (packet.bossActiveIdx !== undefined && typeof packet.bossActiveIdx === 'number') {
                             if (playerTeamIds.length > packet.bossActiveIdx) {
-                                const matchedId = playerTeamIds[packet.bossActiveIdx];
-                                if (matchedId && matchedId !== activePokeId) {
-                                    activePokeId = matchedId;
-                                }
+                                newActiveId = playerTeamIds[packet.bossActiveIdx];
                             }
                         } else if (packet.heroName) {
-                            let matchedId = null;
                             for (const id in pokemonNameMap) {
                                 if (pokemonNameMap[id] === packet.heroName) {
-                                    matchedId = id;
+                                    newActiveId = id;
                                     const details = pokemonDetailsMap[id];
                                     if (details && details.stats && details.stats.hp === packet.heroMaxHp) {
                                         break;
                                     }
                                 }
                             }
-                            if (matchedId && matchedId !== activePokeId) {
-                                activePokeId = matchedId;
-                            }
+                        }
+
+                        if (activePokeId === 'default' && newActiveId !== 'default') {
+                            activePokeId = newActiveId;
                         }
 
                         const currentPoke = registerActiveCombatPoke(activePokeId);
@@ -645,6 +643,10 @@
                                     });
                                 }
                             }
+                        }
+
+                        if (newActiveId && newActiveId !== activePokeId) {
+                            activePokeId = newActiveId;
                         }
 
                         updateStatsUI();

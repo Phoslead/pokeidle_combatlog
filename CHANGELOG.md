@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.3] - 2026-08-06
+## [1.5] - 2026-08-06
 ### Fixed
-- Boss cinematic attacks (like `poisonburst`, `tentacleslap`) which deal massive damage are now properly captured and registered in the combat log as damage taken.
+- Fixed an issue where the final attack dealt by a dying Pokémon and the fatal damage it received were incorrectly attributed to the next Pokémon that entered the field.
+- Added a `[Debug]` button to export raw websocket logs for easier troubleshooting.
 
 ## [1.1] - 2026-08-06
 ### Fixed
