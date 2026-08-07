@@ -8,6 +8,7 @@
 // @run-at       document-start
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        unsafeWindow
 // // @updateURL    https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // // @downloadURL  https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // ==/UserScript==
@@ -640,9 +641,10 @@
         });
     }
 
-    const OriginalWebSocket = window.WebSocket;
+    const targetWindow = typeof unsafeWindow !== 'undefined' ? unsafeWindow : window;
+    const OriginalWebSocket = targetWindow.WebSocket;
 
-    window.WebSocket = new Proxy(OriginalWebSocket, {
+    targetWindow.WebSocket = new Proxy(OriginalWebSocket, {
         construct(target, args) {
             const ws = new target(...args);
 
