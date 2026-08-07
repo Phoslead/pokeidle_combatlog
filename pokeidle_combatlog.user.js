@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -92,6 +92,7 @@
     const pokemonDetailsMap = {};
 
     let activePokeId = 'default';
+    let playerTeamIds = [];
 
     const pokeStats = {};
     let totalDealtAll = 0;
@@ -493,8 +494,10 @@
                     }
 
                     if (packet.type === 'pokes' && Array.isArray(packet.list)) {
+                        playerTeamIds = [];
                         packet.list.forEach(poke => {
                             if (poke.id) {
+                                playerTeamIds.push(poke.id);
                                 const resolvedName = resolvePokemonName(poke.id, poke.speciesId) || poke.name;
                                 pokemonNameMap[poke.id] = resolvedName;
                                 pokemonDetailsMap[poke.id] = {
@@ -543,7 +546,14 @@
                             startSessionTimer();
                         }
 
-                        if (packet.heroName) {
+                        if (packet.bossActiveIdx !== undefined && typeof packet.bossActiveIdx === 'number') {
+                            if (playerTeamIds.length > packet.bossActiveIdx) {
+                                const matchedId = playerTeamIds[packet.bossActiveIdx];
+                                if (matchedId && matchedId !== activePokeId) {
+                                    activePokeId = matchedId;
+                                }
+                            }
+                        } else if (packet.heroName) {
                             let matchedId = null;
                             for (const id in pokemonNameMap) {
                                 if (pokemonNameMap[id] === packet.heroName) {
