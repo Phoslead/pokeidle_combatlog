@@ -339,6 +339,15 @@
                 if (actions) actions.style.display = 'flex';
                 if (hud) hud.style.width = '440px';
                 e.target.textContent = '➖';
+                
+                if (hud) {
+                    let newLeft = hud.offsetLeft;
+                    let newTop = hud.offsetTop;
+                    const maxLeft = window.innerWidth - hud.offsetWidth;
+                    const maxTop = window.innerHeight - hud.offsetHeight;
+                    if (newLeft > maxLeft) hud.style.left = Math.max(0, maxLeft) + 'px';
+                    if (newTop > maxTop) hud.style.top = Math.max(0, maxTop) + 'px';
+                }
             } else {
                 panel.style.display = 'none';
                 if (actions) actions.style.display = 'none';
@@ -413,8 +422,21 @@
             pos2 = pos4 - e.clientY;
             pos3 = e.clientX;
             pos4 = e.clientY;
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            
+            let newTop = elmnt.offsetTop - pos2;
+            let newLeft = elmnt.offsetLeft - pos1;
+            
+            if (newLeft < 0) newLeft = 0;
+            if (newTop < 0) newTop = 0;
+            
+            const maxLeft = window.innerWidth - elmnt.offsetWidth;
+            const maxTop = window.innerHeight - elmnt.offsetHeight;
+            
+            if (newLeft > maxLeft) newLeft = maxLeft;
+            if (newTop > maxTop) newTop = maxTop;
+            
+            elmnt.style.top = newTop + "px";
+            elmnt.style.left = newLeft + "px";
             elmnt.style.bottom = 'auto';
             elmnt.style.right = 'auto';
         }
