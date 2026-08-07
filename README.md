@@ -28,6 +28,9 @@ An advanced quality-of-life userscript that adds a combat log, session timer, an
 ### Copy or Export JSON
 <img width="510" height="882" alt="image" src="https://github.com/user-attachments/assets/d6e76a69-4ada-4ec6-8416-ed72c12b1305" />
 
+### Language
+<img width="477" height="144" alt="image" src="https://github.com/user-attachments/assets/500ff655-9e64-461d-822a-a9db3b99bc79" />
+
 ---
 
 ## 📖 How to Use
