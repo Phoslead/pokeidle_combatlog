@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.7
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
 // @run-at       document-start
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
+// @downloadURL  https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // ==/UserScript==
 
 (function () {
@@ -166,6 +168,11 @@
         }, 1000);
     }
 
+    function stopSessionTimer() {
+        if (timerInterval) clearInterval(timerInterval);
+        timerInterval = null;
+    }
+
     function resetSessionTimer() {
         if (timerInterval) clearInterval(timerInterval);
         timerInterval = null;
@@ -285,7 +292,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `pokeidle_debug_${Date.now()}.txt`;
+            a.download = `pokeidle_combatlog_debug_${Date.now()}.txt`;
             a.click();
             URL.revokeObjectURL(url);
         });
@@ -515,6 +522,10 @@
 
                     if (packet.type === 'enter-hunt') {
                         resetAllCombatData(`Confirmación de cacería (${packet.slug || 'hunt'}).`);
+                    }
+
+                    if (packet.type === 'leave-hunt') {
+                        stopSessionTimer();
                     }
 
                     if (packet.type === 'pokes' && Array.isArray(packet.list)) {

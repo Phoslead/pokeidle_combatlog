@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7] - 2026-08-06
+### Added
+- Added `@updateURL` and `@downloadURL` tags to the script header to allow Tampermonkey to automatically pull updates from the GitHub repository.
+
+## [1.6] - 2026-08-06
+### Added
+- The combat timer will now correctly pause (without resetting to 0) when the `leave-hunt` message is received, allowing players to see the exact duration of their hunt after it ends.
+
 ## [1.5] - 2026-08-06
 ### Fixed
 - Fixed an issue where the final attack dealt by a dying Pokémon and the fatal damage it received were incorrectly attributed to the next Pokémon that entered the field.
