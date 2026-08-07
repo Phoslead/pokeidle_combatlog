@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [1.10] - 2026-08-07
 ### Changed
-- Los botones de acción (Copiar, Guardar, Reset) ahora se ocultan al minimizar el Combat Log.
-- La ventana principal del Combat Log ahora reduce su ancho al estar minimizada para ahorrar espacio en pantalla.
-- Se ha eliminado el mensaje de confirmación al resetear las estadísticas (ya no pausa el juego).
-- El HUD ahora se mantiene siempre dentro de los límites de la pantalla (al arrastrarlo o al maximizarlo).
-- Se ha añadido lógica para empujar el HUD de forma automática hacia la zona visible si aumenta de tamaño (por ejemplo, al iniciar un combate) estando al borde de la pantalla.
+- Action buttons (Copy, Save, Reset) are now hidden when the Combat Log is minimized.
+- The Combat Log's main window now reduces its width when minimized to save screen space.
+- Removed the confirmation message when resetting statistics (it no longer pauses the game).
+- The HUD is now strictly constrained within the screen boundaries (when dragging or maximizing).
+- Added logic to automatically push the HUD back into the visible area if it increases in size (e.g., when starting a combat) while at the edge of the screen.
 
 ## [1.9] - 2026-08-07
 ### Added
