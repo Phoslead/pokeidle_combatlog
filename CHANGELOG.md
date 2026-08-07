@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Removed the confirmation message when resetting statistics (it no longer pauses the game).
 - The HUD is now strictly constrained within the screen boundaries (when dragging or maximizing).
 - Added logic to automatically push the HUD back into the visible area if it increases in size (e.g., when starting a combat) while at the edge of the screen.
+- Added localization support for Spanish, English, and Portuguese. You can change the language by modifying `const LANG` inside the script.
 
 ## [1.9] - 2026-08-07
 ### Added

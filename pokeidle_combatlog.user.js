@@ -83,6 +83,14 @@
         375: "Metang", 447: "Riolu", 448: "Lucario"
     };
 
+    const LANG = 'ES'; // Options / Opciones / Opções: 'ES', 'EN', 'BR'
+    const i18n = {
+        ES: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Guardar', exported: '💾 Guardado', reset: '[Reset Stats]', active: '(Activo)', dealt: 'infligió', taken: 'recibió', levelUp: 'subió a nivel' },
+        EN: { copy: '📋 Copy', copied: '✅ Copied', export: '💾 Save', exported: '💾 Saved', reset: '[Reset Stats]', active: '(Active)', dealt: 'dealt', taken: 'taken', levelUp: 'leveled up to' },
+        BR: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Salvar', exported: '💾 Salvo', reset: '[Reset Stats]', active: '(Ativo)', dealt: 'causou', taken: 'recebeu', levelUp: 'subiu para o nível' }
+    };
+    const t = i18n[LANG] || i18n['ES'];
+
     function resolvePokemonName(id, speciesId) {
         if (speciesId && POKEDEX[speciesId]) {
             return POKEDEX[speciesId];
@@ -256,13 +264,13 @@
                 </div>
                 <div id="cl-actions-container" style="display: flex; gap: 4px; align-items: center;">
                     <button id="cl-copy-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Copiar datos al portapapeles">
-                        📋 Copiar
+                        ${t.copy}
                     </button>
                     <button id="cl-export-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Guardar como archivo .json">
-                        💾 Guardar
+                        ${t.export}
                     </button>
                     <!-- <span id="cl-debug-btn" style="color: #f39c12; cursor: pointer; font-size: 10px; margin-left: 6px; font-weight: bold;" title="Descargar log de Websocket">[Debug]</span> -->
-                    <span id="cl-reset-stats" style="cursor: pointer; opacity: 0.8; color: #ffca28; font-size: 10px; margin-left: 4px;">[Reset Stats]</span>
+                    <span id="cl-reset-stats" style="cursor: pointer; opacity: 0.8; color: #ffca28; font-size: 10px; margin-left: 4px;">${t.reset}</span>
                 </div>
             </div>
 
@@ -319,10 +327,10 @@
             URL.revokeObjectURL(url);
 
             const btn = document.getElementById('cl-export-json');
-            btn.textContent = '💾 Guardado';
+            btn.textContent = t.exported;
             btn.style.background = '#2e7d32';
             setTimeout(() => {
-                btn.textContent = '💾 Guardar';
+                btn.textContent = t.export;
                 btn.style.background = '#2b5278';
             }, 2000);
         });
@@ -371,10 +379,10 @@
 
             navigator.clipboard.writeText(jsonString).then(() => {
                 const btn = document.getElementById('cl-copy-json');
-                btn.textContent = '✅ Copiado';
+                btn.textContent = t.copied;
                 btn.style.background = '#2e7d32';
                 setTimeout(() => {
-                    btn.textContent = '📋 Copiar';
+                    btn.textContent = t.copy;
                     btn.style.background = '#2b5278';
                 }, 2000);
             }).catch(err => {
@@ -480,7 +488,7 @@
             const poke = pokeStats[id];
             const isActive = id === activePokeId;
             const isExpanded = id === expandedPokeId;
-            const activeBadge = isActive ? ' <span style="color:#64b5f6; font-size:9px;">(Activo)</span>' : '';
+            const activeBadge = isActive ? ` <span style="color:#64b5f6; font-size:9px;">${t.active}</span>` : '';
             const arrow = isExpanded ? '▼' : '▶';
 
             const avgDealt = poke.dealtHitsCount > 0 ? Math.round(poke.dealt / poke.dealtHitsCount) : 0;
@@ -519,14 +527,14 @@
                             if (h.type === 'level_up') {
                                 return `
                                             <div style="color: #ffd700; font-weight: bold; line-height: 1.2; background: rgba(255, 215, 0, 0.1); padding: 2px 4px; border-radius: 2px;">
-                                                <span style="color: #64b5f6;">[${h.timerTime}]</span> ⭐ ${poke.name} subió a nivel ${h.newLevel}.
+                                                <span style="color: #64b5f6;">[${h.timerTime}]</span> ⭐ ${poke.name} ${t.levelUp} ${h.newLevel}.
                                             </div>
                                         `;
                             }
                             const isDealt = h.type === 'dealt';
                             const color = isDealt ? '#81c784' : '#e57373';
                             const icon = isDealt ? '⚔️' : '💥';
-                            const actionText = isDealt ? `infligió` : `recibió`;
+                            const actionText = isDealt ? t.dealt : t.taken;
                             return `
                                         <div style="color: ${color}; line-height: 1.2;">
                                             <span style="color: #64b5f6;">[${h.timerTime}]</span> ${icon} ${actionText} <b>${h.amount.toLocaleString()}</b> dmg (${h.move})

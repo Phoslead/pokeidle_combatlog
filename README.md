@@ -32,6 +32,9 @@ An advanced quality-of-life userscript that adds a combat log, session timer, an
 
 ## 📖 How to Use
 
+0. **Change Language (Optional):**
+   - The script is in Spanish by default. To change it to English or Portuguese, edit the script in Tampermonkey and change `const LANG = 'ES';` to `const LANG = 'EN';` or `const LANG = 'BR';` (around line 86).
+
 1. **Engage in Combat:**
    - Simply play the game as normal. The script automatically listens to the game's network traffic and will start logging stats as soon as your Pokémon deal or receive damage.
 
