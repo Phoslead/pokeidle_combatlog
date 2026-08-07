@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         PokeIdle Combat Log 1.10
+// @name         PokeIdle Combat Log 1.11
 // @namespace    http://tampermonkey.net/
-// @version      1.10
+// @version      1.11
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -154,6 +154,7 @@
     let timerInterval = null;
     let sessionStarted = false;
     let expandedPokeId = null;
+    let currentHunt = 'Unknown';
 
     function getFormattedTimerTime() {
         if (!sessionStarted || !sessionStartTime) return "+00:00:00";
@@ -247,6 +248,7 @@
 
     function buildExportDataObject() {
         return {
+            hunt: currentHunt,
             sessionDurationSeconds: sessionStartTime ? Math.floor((Date.now() - sessionStartTime) / 1000) : 0,
             exportedAt: new Date().toISOString(),
             summary: {
@@ -324,7 +326,7 @@
 
             <div id="combat-stats-panel" style="background: #121218; padding: 8px; max-height: 450px; overflow-y: auto; flex-grow: 1;">
                 <div style="font-weight: bold; color: #64b5f6; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>⏱️ <span id="cl-session-timer" style="color: #64b5f6;">00:00:00</span></span>
+                    <span>⏱️ <span id="cl-session-timer" style="color: #64b5f6;">00:00:00</span> <span id="cl-current-hunt" style="color: #ffca28; margin-left: 8px; font-size: 10px;">(${currentHunt})</span></span>
                     <span>⚔️ <span id="stat-total-dealt" style="color:#4caf50;">0</span> | 💥 <span id="stat-total-taken" style="color:#ff5252;">0</span></span>
                 </div>
                 <div id="stats-individual-list" style="display: flex; flex-direction: column; gap: 4px;">
@@ -387,7 +389,7 @@
             const url = URL.createObjectURL(blob);
 
             const dateStr = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16);
-            const fileName = `pokeidle_combat_${dateStr}.json`;
+            const fileName = `pokeidle_combat_${currentHunt}_${dateStr}.json`;
 
             const a = document.createElement('a');
             a.href = url;
@@ -470,7 +472,7 @@
             const url = URL.createObjectURL(blob);
 
             const dateStr = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16);
-            const fileName = `pokeidle_combat_${dateStr}.json`;
+            const fileName = `pokeidle_combat_${currentHunt}_${dateStr}.json`;
 
             const a = document.createElement('a');
             a.href = url;
@@ -654,6 +656,9 @@
                         const outPacket = JSON.parse(data);
 
                         if (outPacket.type === 'enter-hunt') {
+                            currentHunt = outPacket.slug || 'Unknown';
+                            const huntEl = document.getElementById('cl-current-hunt');
+                            if (huntEl) huntEl.textContent = `(${currentHunt})`;
                             resetAllCombatData(`Nueva cacería iniciada (${outPacket.slug || 'hunt'}).`);
                         }
 
@@ -689,6 +694,9 @@
                     const packet = JSON.parse(event.data);
 
                     if (packet.type === 'enter-hunt') {
+                        currentHunt = packet.slug || 'Unknown';
+                        const huntEl = document.getElementById('cl-current-hunt');
+                        if (huntEl) huntEl.textContent = `(${currentHunt})`;
                         resetAllCombatData(`Confirmación de cacería (${packet.slug || 'hunt'}).`);
                     }
 

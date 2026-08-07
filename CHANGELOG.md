@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.11] - 2026-08-07
+### Added
+- Added the current hunt name next to the session timer in the UI.
+- Included the current hunt name in the JSON export data object and clipboard copy.
+- The downloaded JSON file now includes the hunt name in its filename (e.g., `pokeidle_combat_{hunt}_date.json`).
+
 ## [1.10] - 2026-08-07
 ### Changed
 - Action buttons (Copy, Save, Reset) are now hidden when the Combat Log is minimized.
