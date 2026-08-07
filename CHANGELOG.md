@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12] - 2026-08-07
+### Fixed
+- Fixed an issue where clicking the "Save" (Guardar) button would open the download prompt twice due to duplicated event listeners.
+
 ## [1.11] - 2026-08-07
 ### Added
 - Added the current hunt name next to the session timer in the UI.

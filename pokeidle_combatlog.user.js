@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         PokeIdle Combat Log 1.11
+// @name         PokeIdle Combat Log 1.12
 // @namespace    http://tampermonkey.net/
-// @version      1.11
+// @version      1.12
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -462,34 +462,6 @@
             }).catch(err => {
                 alert('Error al copiar al portapapeles: ' + err);
             });
-        });
-
-        document.getElementById('cl-export-json').addEventListener('click', () => {
-            const exportData = buildExportDataObject();
-            const jsonString = JSON.stringify(exportData, null, 2);
-
-            const blob = new Blob([jsonString], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-
-            const dateStr = new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16);
-            const fileName = `pokeidle_combat_${currentHunt}_${dateStr}.json`;
-
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-
-            const btn = document.getElementById('cl-export-json');
-            btn.textContent = '💾 Guardado';
-            btn.style.background = '#2e7d32';
-            setTimeout(() => {
-                btn.textContent = '💾 Guardar';
-                btn.style.background = '#2b5278';
-            }, 2000);
         });
     }
 
