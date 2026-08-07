@@ -85,9 +85,9 @@
 
     const LANG = 'ES'; // Options / Opciones / Opções: 'ES', 'EN', 'BR'
     const i18n = {
-        ES: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Guardar', exported: '💾 Guardado', reset: '[Reset Stats]', active: '(Activo)', dealt: 'infligió', taken: 'recibió', levelUp: 'subió a nivel' },
-        EN: { copy: '📋 Copy', copied: '✅ Copied', export: '💾 Save', exported: '💾 Saved', reset: '[Reset Stats]', active: '(Active)', dealt: 'dealt', taken: 'taken', levelUp: 'leveled up to' },
-        BR: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Salvar', exported: '💾 Salvo', reset: '[Reset Stats]', active: '(Ativo)', dealt: 'causou', taken: 'recebeu', levelUp: 'subiu para o nível' }
+        ES: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Guardar', exported: '💾 Guardado', reset: '[Reset Stats]', active: '(Activo)', dealt: 'infligió', taken: 'recibió', levelUp: 'subió a nivel', noPokemon: 'Sin registro de Pokémon en combate', noDamage: 'Sin registro de daño aún.', waiting: 'Esperando primer combate...' },
+        EN: { copy: '📋 Copy', copied: '✅ Copied', export: '💾 Save', exported: '💾 Saved', reset: '[Reset Stats]', active: '(Active)', dealt: 'dealt', taken: 'taken', levelUp: 'leveled up to', noPokemon: 'No Pokémon logged in combat', noDamage: 'No damage log yet.', waiting: 'Waiting for first combat...' },
+        BR: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Salvar', exported: '💾 Salvo', reset: '[Reset Stats]', active: '(Ativo)', dealt: 'causou', taken: 'recebeu', levelUp: 'subiu para o nível', noPokemon: 'Nenhum Pokémon registrado em combate', noDamage: 'Nenhum registro de dano ainda.', waiting: 'Aguardando o primeiro combate...' }
     };
     const t = i18n[LANG] || i18n['ES'];
 
@@ -280,7 +280,7 @@
                     <span>⚔️ <span id="stat-total-dealt" style="color:#4caf50;">0</span> | 💥 <span id="stat-total-taken" style="color:#ff5252;">0</span></span>
                 </div>
                 <div id="stats-individual-list" style="display: flex; flex-direction: column; gap: 4px;">
-                    <div style="color: #777; font-style: italic;">Esperando primer combate...</div>
+                    <div style="color: #777; font-style: italic;">${t.waiting}</div>
                 </div>
             </div>
         `;
@@ -522,7 +522,7 @@
                                 </div>
                             ` : ''}
                             ${poke.history.length === 0
-                        ? '<div style="color: #666; font-style: italic;">Sin registro de daño aún.</div>'
+                        ? `<div style="color: #666; font-style: italic;">${t.noDamage}</div>`
                         : poke.history.slice(-100).map(h => {
                             if (h.type === 'level_up') {
                                 return `
@@ -548,7 +548,7 @@
             `;
         }
 
-        listEl.innerHTML = html || '<div style="color: #777;">Sin registro de Pokémon en combate</div>';
+        listEl.innerHTML = html || `<div style="color: #777;">${t.noPokemon}</div>`;
 
         const newHistoryContainer = document.getElementById('expanded-history-container');
         if (newHistoryContainer && savedScrollTop !== null) {
