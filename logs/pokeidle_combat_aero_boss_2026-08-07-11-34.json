@@ -1,0 +1,1001 @@
+{
+  "hunt": "aero_boss",
+  "sessionDurationSeconds": 104,
+  "exportedAt": "2026-08-07T11:34:53.818Z",
+  "summary": {
+    "totalDamageDealt": 79246,
+    "totalDamageTaken": 67672
+  },
+  "pokemons": [
+    {
+      "id": "cmrykll0l8hv6xzzl7tiae0el",
+      "name": "Alakazam",
+      "level": 314,
+      "quality": 1.709,
+      "stats": {
+        "hp": 517,
+        "atk": 376,
+        "def": 381,
+        "spAtk": 805,
+        "spDef": 660,
+        "speed": 773
+      },
+      "totalDealt": 1695,
+      "totalTaken": 9330,
+      "dealtHitsCount": 4,
+      "avgDealtPerHit": 424,
+      "history": [
+        {
+          "timerTime": "+00:00:00",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 444,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:01",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 432,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:01",
+          "type": "taken",
+          "move": "skyterror",
+          "moveType": "BOSS",
+          "amount": 3375
+        },
+        {
+          "timerTime": "+00:00:04",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 424,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:04",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2780
+        },
+        {
+          "timerTime": "+00:00:05",
+          "type": "dealt",
+          "move": "Psyshock",
+          "moveType": "PSYCHIC",
+          "amount": 395,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:05",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 3175
+        }
+      ]
+    },
+    {
+      "id": "cmrpjn9qn1zgw133j459wf1dh",
+      "name": "Gengar",
+      "level": 317,
+      "quality": 1.8,
+      "stats": {
+        "hp": 565,
+        "atk": 523,
+        "def": 416,
+        "spAtk": 842,
+        "spDef": 624,
+        "speed": 909
+      },
+      "totalDealt": 2468,
+      "totalTaken": 8763,
+      "dealtHitsCount": 4,
+      "avgDealtPerHit": 617,
+      "history": [
+        {
+          "timerTime": "+00:00:05",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 617,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:07",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 605,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:07",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2738
+        },
+        {
+          "timerTime": "+00:00:08",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 590,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:09",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2963
+        },
+        {
+          "timerTime": "+00:00:10",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 656,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:11",
+          "type": "taken",
+          "move": "hyperbeam",
+          "moveType": "BOSS",
+          "amount": 3062
+        }
+      ]
+    },
+    {
+      "id": "cmrvzh3ko3y27q46z3k9uq4br",
+      "name": "Charizard",
+      "level": 471,
+      "quality": 1.72,
+      "stats": {
+        "hp": 1104,
+        "atk": 930,
+        "def": 930,
+        "spAtk": 1170,
+        "spDef": 763,
+        "speed": 1214
+      },
+      "totalDealt": 17536,
+      "totalTaken": 13908,
+      "dealtHitsCount": 14,
+      "avgDealtPerHit": 1253,
+      "history": [
+        {
+          "timerTime": "+00:00:12",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1204,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:14",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1314,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:14",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1272
+        },
+        {
+          "timerTime": "+00:00:16",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1177,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:16",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1272
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1230,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1204
+        },
+        {
+          "timerTime": "+00:00:18",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1345,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:20",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1295,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:20",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1294
+        },
+        {
+          "timerTime": "+00:00:21",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1219,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:21",
+          "type": "taken",
+          "move": "skyterror",
+          "moveType": "BOSS",
+          "amount": 1285
+        },
+        {
+          "timerTime": "+00:00:22",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1180,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:24",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1290
+        },
+        {
+          "timerTime": "+00:00:24",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1356,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:26",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1280
+        },
+        {
+          "timerTime": "+00:00:26",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1361,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1230
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1249,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1171,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1168
+        },
+        {
+          "timerTime": "+00:00:31",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1240,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:31",
+          "type": "taken",
+          "move": "hyperbeam",
+          "moveType": "BOSS",
+          "amount": 1377
+        },
+        {
+          "timerTime": "+00:00:33",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 1195,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:33",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1236
+        }
+      ]
+    },
+    {
+      "id": "cmrzrbyfk22t06ts0kpzyl92q",
+      "name": "Tentacruel",
+      "level": 372,
+      "quality": 1.8,
+      "stats": {
+        "hp": 923,
+        "atk": 691,
+        "def": 566,
+        "spAtk": 774,
+        "spDef": 1024,
+        "speed": 1014
+      },
+      "totalDealt": 4297,
+      "totalTaken": 12316,
+      "dealtHitsCount": 8,
+      "avgDealtPerHit": 537,
+      "history": [
+        {
+          "timerTime": "+00:00:34",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 549,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 500,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2163
+        },
+        {
+          "timerTime": "+00:00:38",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 572,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:38",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2095
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 564,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2078
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 492,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:41",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 532,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:41",
+          "type": "taken",
+          "move": "skyterror",
+          "moveType": "BOSS",
+          "amount": 2008
+        },
+        {
+          "timerTime": "+00:00:44",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 519,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:44",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 2079
+        },
+        {
+          "timerTime": "+00:00:45",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 569,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:45",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1893
+        }
+      ]
+    },
+    {
+      "id": "cmrww1i0mgl9lovodhpkpd2e6",
+      "name": "Exeggutor",
+      "level": 471,
+      "quality": 1.762,
+      "stats": {
+        "hp": 1089,
+        "atk": 1074,
+        "def": 1045,
+        "spAtk": 1297,
+        "spDef": 778,
+        "speed": 783
+      },
+      "totalDealt": 16529,
+      "totalTaken": 13222,
+      "dealtHitsCount": 15,
+      "avgDealtPerHit": 1102,
+      "history": [
+        {
+          "timerTime": "+00:00:45",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1110,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:47",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1143,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:47",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1180
+        },
+        {
+          "timerTime": "+00:00:48",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1033,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:49",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1056
+        },
+        {
+          "timerTime": "+00:00:50",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1118,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:51",
+          "type": "taken",
+          "move": "hyperbeam",
+          "moveType": "BOSS",
+          "amount": 1158
+        },
+        {
+          "timerTime": "+00:00:52",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1071,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:53",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1037
+        },
+        {
+          "timerTime": "+00:00:53",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1093,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:55",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1086,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:56",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1028
+        },
+        {
+          "timerTime": "+00:00:56",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1058,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:58",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1120
+        },
+        {
+          "timerTime": "+00:00:58",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1173,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:00",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1155
+        },
+        {
+          "timerTime": "+00:01:00",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1161,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:01",
+          "type": "taken",
+          "move": "skyterror",
+          "moveType": "BOSS",
+          "amount": 1191
+        },
+        {
+          "timerTime": "+00:01:01",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1122,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:03",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1101,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:04",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1019
+        },
+        {
+          "timerTime": "+00:01:04",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1047,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:06",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1136
+        },
+        {
+          "timerTime": "+00:01:08",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1122,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:08",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1132
+        },
+        {
+          "timerTime": "+00:01:09",
+          "type": "dealt",
+          "move": "Leaf Storm",
+          "moveType": "GRASS",
+          "amount": 1091,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:09",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 1010
+        }
+      ]
+    },
+    {
+      "id": "cmsac0mks1l2iuwvgrhgo8qyd",
+      "name": "Tyranitar",
+      "level": 516,
+      "quality": 2.217,
+      "stats": {
+        "hp": 1715,
+        "atk": 1795,
+        "def": 1698,
+        "spAtk": 1473,
+        "spDef": 1561,
+        "speed": 1242
+      },
+      "totalDealt": 36721,
+      "totalTaken": 10133,
+      "dealtHitsCount": 20,
+      "avgDealtPerHit": 1836,
+      "history": [
+        {
+          "timerTime": "+00:01:09",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1918,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:11",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1783,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:11",
+          "type": "taken",
+          "move": "hyperbeam",
+          "moveType": "BOSS",
+          "amount": 674
+        },
+        {
+          "timerTime": "+00:01:12",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1703,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:13",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 668
+        },
+        {
+          "timerTime": "+00:01:14",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1968,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:15",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 632
+        },
+        {
+          "timerTime": "+00:01:16",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1823,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:17",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 704
+        },
+        {
+          "timerTime": "+00:01:17",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1788,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:19",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1847,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:19",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 637
+        },
+        {
+          "timerTime": "+00:01:20",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1794,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:21",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 693
+        },
+        {
+          "timerTime": "+00:01:22",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1876,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:23",
+          "type": "taken",
+          "move": "skyterror",
+          "moveType": "BOSS",
+          "amount": 722
+        },
+        {
+          "timerTime": "+00:01:24",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1978,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:25",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 691
+        },
+        {
+          "timerTime": "+00:01:25",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1896,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:27",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1808,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 659
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1818,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:30",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 640
+        },
+        {
+          "timerTime": "+00:01:30",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1825,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:32",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 630
+        },
+        {
+          "timerTime": "+00:01:32",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1796,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:33",
+          "type": "taken",
+          "move": "hyperbeam",
+          "moveType": "BOSS",
+          "amount": 776
+        },
+        {
+          "timerTime": "+00:01:33",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1722,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:35",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1756,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:35",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 638
+        },
+        {
+          "timerTime": "+00:01:36",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1977,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:37",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 702
+        },
+        {
+          "timerTime": "+00:01:38",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1772,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:39",
+          "type": "taken",
+          "move": "Falling Rocks",
+          "moveType": "ROCK",
+          "amount": 667
+        },
+        {
+          "timerTime": "+00:01:40",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1873,
+          "eff": 1
+        }
+      ]
+    }
+  ]
+}
