@@ -1,0 +1,864 @@
+{
+  "sessionDurationSeconds": 110,
+  "exportedAt": "2026-08-07T03:47:46.494Z",
+  "summary": {
+    "totalDamageDealt": 79723,
+    "totalDamageTaken": 23372
+  },
+  "pokemons": [
+    {
+      "id": "cmsac0mks1l2iuwvgrhgo8qyd",
+      "name": "Tyranitar",
+      "level": 509,
+      "quality": 2.217,
+      "stats": {
+        "hp": 1692,
+        "atk": 1771,
+        "def": 1674,
+        "spAtk": 1453,
+        "spDef": 1540,
+        "speed": 1225
+      },
+      "totalDealt": 61219,
+      "totalTaken": 8779,
+      "dealtHitsCount": 35,
+      "avgDealtPerHit": 1749,
+      "history": [
+        {
+          "timerTime": "+00:00:00",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1822,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:00",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1650,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:02",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1755,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:03",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 491
+        },
+        {
+          "timerTime": "+00:00:03",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1773,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:05",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 451
+        },
+        {
+          "timerTime": "+00:00:05",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1881,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:06",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1768,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:07",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1666,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:09",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 520
+        },
+        {
+          "timerTime": "+00:00:09",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1851,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:11",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 496
+        },
+        {
+          "timerTime": "+00:00:11",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1643,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:13",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1772,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:16",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1681,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:16",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 483
+        },
+        {
+          "timerTime": "+00:00:16",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1726,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:17",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 511
+        },
+        {
+          "timerTime": "+00:00:17",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1837,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:20",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1885,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:22",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 449
+        },
+        {
+          "timerTime": "+00:00:22",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1752,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:23",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1760,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:23",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 508
+        },
+        {
+          "timerTime": "+00:00:23",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1765,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:26",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1704,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 471
+        },
+        {
+          "timerTime": "+00:00:28",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1814,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 473
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1669,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:30",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1901,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:31",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1685,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:34",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 514
+        },
+        {
+          "timerTime": "+00:00:34",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1687,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 527
+        },
+        {
+          "timerTime": "+00:00:36",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1816,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:38",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1809,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1723,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 498
+        },
+        {
+          "timerTime": "+00:00:40",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1705,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:42",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 456
+        },
+        {
+          "timerTime": "+00:00:42",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1771,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:44",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1758,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:46",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 470
+        },
+        {
+          "timerTime": "+00:00:46",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1685,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:47",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1664,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:47",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 455
+        },
+        {
+          "timerTime": "+00:00:47",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1710,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:49",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1750,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:52",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 512
+        },
+        {
+          "timerTime": "+00:00:52",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1729,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:54",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 494
+        },
+        {
+          "timerTime": "+00:00:54",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1652,
+          "eff": 1
+        }
+      ]
+    },
+    {
+      "id": "cmrzrbyfk22t06ts0kpzyl92q",
+      "name": "Tentacruel",
+      "level": 372,
+      "quality": 1.8,
+      "stats": {
+        "hp": 923,
+        "atk": 691,
+        "def": 566,
+        "spAtk": 774,
+        "spDef": 1024,
+        "speed": 1014
+      },
+      "totalDealt": 7369,
+      "totalTaken": 5889,
+      "dealtHitsCount": 16,
+      "avgDealtPerHit": 461,
+      "history": [
+        {
+          "timerTime": "+00:00:54",
+          "type": "dealt",
+          "move": "Ancient Power",
+          "moveType": "ROCK",
+          "amount": 1692,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:54",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 370,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:56",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 348,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:56",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 768
+        },
+        {
+          "timerTime": "+00:00:57",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 382,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:00:58",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 724
+        },
+        {
+          "timerTime": "+00:00:59",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 366,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:00",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 355,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:02",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 396,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:02",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 697
+        },
+        {
+          "timerTime": "+00:01:04",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 367,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:04",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 762
+        },
+        {
+          "timerTime": "+00:01:05",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 382,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:07",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 366,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:08",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 704
+        },
+        {
+          "timerTime": "+00:01:08",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 382,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:10",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 400,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:10",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 762
+        },
+        {
+          "timerTime": "+00:01:12",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 384,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:14",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 392,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:14",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 773
+        },
+        {
+          "timerTime": "+00:01:16",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 398,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:16",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 699
+        },
+        {
+          "timerTime": "+00:01:18",
+          "type": "dealt",
+          "move": "Surf",
+          "moveType": "WATER",
+          "amount": 389,
+          "eff": 1
+        }
+      ]
+    },
+    {
+      "id": "cmrpjn9qn1zgw133j459wf1dh",
+      "name": "Gengar",
+      "level": 317,
+      "quality": 1.8,
+      "stats": {
+        "hp": 565,
+        "atk": 523,
+        "def": 416,
+        "spAtk": 842,
+        "spDef": 624,
+        "speed": 909
+      },
+      "totalDealt": 2656,
+      "totalTaken": 3636,
+      "dealtHitsCount": 6,
+      "avgDealtPerHit": 443,
+      "history": [
+        {
+          "timerTime": "+00:01:20",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 441,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:22",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 423,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:22",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1259
+        },
+        {
+          "timerTime": "+00:01:22",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 467,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:24",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1133
+        },
+        {
+          "timerTime": "+00:01:24",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 457,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:26",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 459,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 409,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1244
+        }
+      ]
+    },
+    {
+      "id": "cmrvzh3ko3y27q46z3k9uq4br",
+      "name": "Charizard",
+      "level": 471,
+      "quality": 1.72,
+      "stats": {
+        "hp": 1104,
+        "atk": 930,
+        "def": 930,
+        "spAtk": 1170,
+        "spDef": 763,
+        "speed": 1214
+      },
+      "totalDealt": 8479,
+      "totalTaken": 5068,
+      "dealtHitsCount": 10,
+      "avgDealtPerHit": 848,
+      "history": [
+        {
+          "timerTime": "+00:01:28",
+          "type": "dealt",
+          "move": "Shadow Storm",
+          "moveType": "GHOST",
+          "amount": 452,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1269
+        },
+        {
+          "timerTime": "+00:01:28",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 921,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:30",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 891,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:32",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 929,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:32",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 912
+        },
+        {
+          "timerTime": "+00:01:33",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 907,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:34",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 977
+        },
+        {
+          "timerTime": "+00:01:35",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 843,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:36",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 817,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:38",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 921,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:38",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 1000
+        },
+        {
+          "timerTime": "+00:01:40",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 873,
+          "eff": 1
+        },
+        {
+          "timerTime": "+00:01:40",
+          "type": "taken",
+          "move": "Surf",
+          "moveType": "FX_4148",
+          "amount": 910
+        },
+        {
+          "timerTime": "+00:01:41",
+          "type": "dealt",
+          "move": "Magma Storm",
+          "moveType": "FIRE",
+          "amount": 925,
+          "eff": 1
+        }
+      ]
+    }
+  ]
+}

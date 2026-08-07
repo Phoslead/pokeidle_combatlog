@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle Combat Log
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @author       Phoslead
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
@@ -540,7 +540,7 @@
                         }
                     }
 
-                    if (packet.type === 'field' && packet.hits && packet.hits.length > 0) {
+                    if (packet.type === 'field' && ( (packet.hits && packet.hits.length > 0) || (packet.bossCinematic && packet.bossCinematicDmg) )) {
 
                         if (!sessionStarted) {
                             startSessionTimer();
@@ -573,7 +573,7 @@
                         const timerTimeStr = getFormattedTimerTime();
 
                         if (currentPoke) {
-                            packet.hits.forEach(hit => {
+                            (packet.hits || []).forEach(hit => {
                                 if (hit.slot === -1) {
                                     currentPoke.taken += hit.amount;
                                     currentPoke.takenHitsCount++;
@@ -603,6 +603,21 @@
                                     });
                                 }
                             });
+
+                            if (packet.bossCinematic && packet.bossCinematicDmg) {
+                                currentPoke.taken += packet.bossCinematicDmg;
+                                currentPoke.takenHitsCount++;
+                                totalTakenAll += packet.bossCinematicDmg;
+
+                                currentPoke.history.push({
+                                    timerTime: timerTimeStr,
+                                    //timestamp: Date.now(),
+                                    type: 'taken',
+                                    move: packet.bossCinematic,
+                                    moveType: 'BOSS',
+                                    amount: packet.bossCinematicDmg
+                                });
+                            }
                         }
 
                         updateStatsUI();
