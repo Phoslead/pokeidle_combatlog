@@ -89,7 +89,7 @@
         if (typeof GM_setValue !== 'undefined') {
             GM_setValue('pokeidle_cl_lang', lang);
         } else {
-            try { localStorage.setItem('pokeidle_cl_lang', lang); } catch (e) {}
+            try { localStorage.setItem('pokeidle_cl_lang', lang); } catch (e) { }
         }
     }
 
@@ -114,21 +114,21 @@
         currentLang = lang;
         saveLanguage(lang);
         t = i18n[currentLang];
-        
+
         const copyBtn = document.getElementById('cl-copy-json');
         if (copyBtn && !copyBtn.textContent.includes('✅')) copyBtn.textContent = t.copy;
-        
+
         const exportBtn = document.getElementById('cl-export-json');
         if (exportBtn && !exportBtn.textContent.includes('do') && !exportBtn.textContent.includes('ed') && !exportBtn.textContent.includes('vo')) {
             exportBtn.textContent = t.export;
         }
-        
+
         const resetBtn = document.getElementById('cl-reset-stats');
         if (resetBtn) resetBtn.textContent = t.reset;
-        
+
         const langToggle = document.getElementById('cl-lang-toggle');
         if (langToggle) langToggle.innerHTML = `🌐 Language`;
-        
+
         updateStatsUI();
     }
 
@@ -243,7 +243,6 @@
         }
         resetSessionTimer();
         updateStatsUI();
-        console.log(`[Combat Log] Reset ejecutado: ${reason}`);
     }
 
     function buildExportDataObject() {
@@ -361,7 +360,7 @@
         }
 
         makeElementDraggable(hud, document.getElementById('cl-header'));
-        
+
         const constrainHUD = () => {
             let newLeft = hud.offsetLeft;
             let newTop = hud.offsetTop;
@@ -512,19 +511,19 @@
             pos2 = pos4 - e.clientY;
             pos3 = e.clientX;
             pos4 = e.clientY;
-            
+
             let newTop = elmnt.offsetTop - pos2;
             let newLeft = elmnt.offsetLeft - pos1;
-            
+
             if (newLeft < 0) newLeft = 0;
             if (newTop < 0) newTop = 0;
-            
+
             const maxLeft = window.innerWidth - elmnt.offsetWidth;
             const maxTop = window.innerHeight - elmnt.offsetHeight;
-            
+
             if (newLeft > maxLeft) newLeft = maxLeft;
             if (newTop > maxTop) newTop = maxTop;
-            
+
             elmnt.style.top = newTop + "px";
             elmnt.style.left = newLeft + "px";
             elmnt.style.bottom = 'auto';
