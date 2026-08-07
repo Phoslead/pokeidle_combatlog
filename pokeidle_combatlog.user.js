@@ -6,7 +6,8 @@
 // @description  Combat Log con opciones de copiar al portapapeles y descarga de JSON
 // @match        https://poke.idleworld.online/play
 // @run-at       document-start
-// @grant        none
+// @grant        GM_setValue
+// @grant        GM_getValue
 // // @updateURL    https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // // @downloadURL  https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // ==/UserScript==
@@ -83,13 +84,52 @@
         375: "Metang", 447: "Riolu", 448: "Lucario"
     };
 
-    const LANG = 'ES'; // Options / Opciones / Opções: 'ES', 'EN', 'BR'
+    function saveLanguage(lang) {
+        if (typeof GM_setValue !== 'undefined') {
+            GM_setValue('pokeidle_cl_lang', lang);
+        } else {
+            try { localStorage.setItem('pokeidle_cl_lang', lang); } catch (e) {}
+        }
+    }
+
+    function loadLanguage() {
+        if (typeof GM_getValue !== 'undefined') {
+            return GM_getValue('pokeidle_cl_lang', 'ES');
+        } else {
+            try { return localStorage.getItem('pokeidle_cl_lang') || 'ES'; } catch (e) { return 'ES'; }
+        }
+    }
+
+    let currentLang = loadLanguage();
     const i18n = {
         ES: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Guardar', exported: '💾 Guardado', reset: '[Reset Stats]', active: '(Activo)', dealt: 'infligió', taken: 'recibió', levelUp: 'subió a nivel', noPokemon: 'Sin registro de Pokémon en combate', noDamage: 'Sin registro de daño aún.', waiting: 'Esperando primer combate...' },
         EN: { copy: '📋 Copy', copied: '✅ Copied', export: '💾 Save', exported: '💾 Saved', reset: '[Reset Stats]', active: '(Active)', dealt: 'dealt', taken: 'taken', levelUp: 'leveled up to', noPokemon: 'No Pokémon logged in combat', noDamage: 'No damage log yet.', waiting: 'Waiting for first combat...' },
         BR: { copy: '📋 Copiar', copied: '✅ Copiado', export: '💾 Salvar', exported: '💾 Salvo', reset: '[Reset Stats]', active: '(Ativo)', dealt: 'causou', taken: 'recebeu', levelUp: 'subiu para o nível', noPokemon: 'Nenhum Pokémon registrado em combate', noDamage: 'Nenhum registro de dano ainda.', waiting: 'Aguardando o primeiro combate...' }
     };
-    const t = i18n[LANG] || i18n['ES'];
+    let t = i18n[currentLang] || i18n['ES'];
+
+    function changeLanguage(lang) {
+        if (!i18n[lang]) return;
+        currentLang = lang;
+        saveLanguage(lang);
+        t = i18n[currentLang];
+        
+        const copyBtn = document.getElementById('cl-copy-json');
+        if (copyBtn && !copyBtn.textContent.includes('✅')) copyBtn.textContent = t.copy;
+        
+        const exportBtn = document.getElementById('cl-export-json');
+        if (exportBtn && !exportBtn.textContent.includes('do') && !exportBtn.textContent.includes('ed') && !exportBtn.textContent.includes('vo')) {
+            exportBtn.textContent = t.export;
+        }
+        
+        const resetBtn = document.getElementById('cl-reset-stats');
+        if (resetBtn) resetBtn.textContent = t.reset;
+        
+        const langToggle = document.getElementById('cl-lang-toggle');
+        if (langToggle) langToggle.innerHTML = `🌐 Language`;
+        
+        updateStatsUI();
+    }
 
     function resolvePokemonName(id, speciesId) {
         if (speciesId && POKEDEX[speciesId]) {
@@ -263,6 +303,14 @@
                     <span>⚔️ COMBAT LOG</span>
                 </div>
                 <div id="cl-actions-container" style="display: flex; gap: 4px; align-items: center;">
+                    <div style="position: relative; display: inline-block; margin-right: 4px;">
+                        <span id="cl-lang-toggle" style="cursor: pointer; opacity: 0.8; color: #64b5f6; font-size: 10px;">🌐 Language</span>
+                        <div id="cl-lang-menu" style="display: none; position: absolute; top: 100%; right: 0; background: #1a1a24; border: 1px solid #444; border-radius: 4px; padding: 4px; z-index: 10; margin-top: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+                            <div class="cl-lang-option" data-lang="ES" style="cursor: pointer; padding: 4px 8px; color: #fff; font-size: 10px; border-radius: 2px;">Español</div>
+                            <div class="cl-lang-option" data-lang="EN" style="cursor: pointer; padding: 4px 8px; color: #fff; font-size: 10px; border-radius: 2px;">English</div>
+                            <div class="cl-lang-option" data-lang="BR" style="cursor: pointer; padding: 4px 8px; color: #fff; font-size: 10px; border-radius: 2px;">Português</div>
+                        </div>
+                    </div>
                     <button id="cl-copy-json" style="background: #2b5278; border: none; color: #fff; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 10px;" title="Copiar datos al portapapeles">
                         ${t.copy}
                     </button>
@@ -286,6 +334,30 @@
         `;
 
         document.body.appendChild(hud);
+
+        const langToggle = document.getElementById('cl-lang-toggle');
+        const langMenu = document.getElementById('cl-lang-menu');
+        if (langToggle && langMenu) {
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langMenu.style.display = langMenu.style.display === 'none' ? 'block' : 'none';
+            });
+            document.querySelectorAll('.cl-lang-option').forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lang = e.target.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    langMenu.style.display = 'none';
+                });
+                opt.addEventListener('mouseenter', e => e.target.style.background = '#2b5278');
+                opt.addEventListener('mouseleave', e => e.target.style.background = 'transparent');
+            });
+            document.addEventListener('click', (e) => {
+                if (!langMenu.contains(e.target) && e.target !== langToggle) {
+                    langMenu.style.display = 'none';
+                }
+            });
+        }
 
         makeElementDraggable(hud, document.getElementById('cl-header'));
         

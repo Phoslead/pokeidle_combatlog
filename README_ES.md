@@ -33,7 +33,7 @@ Un userscript avanzado de calidad de vida que añade un registro de combate (com
 ## 📖 Cómo Usar
 
 0. **Cambiar Idioma (Opcional):**
-   - El script está en Español por defecto. Para cambiarlo a Inglés o Portugués, edita el script en Tampermonkey y cambia `const LANG = 'ES';` por `const LANG = 'EN';` o `const LANG = 'BR';` (cerca de la línea 86).
+   - Haz clic en el botón "🌐 Language" dentro de la cabecera del Combat Log para alternar entre Español, Inglés y Portugués. Tu preferencia se guardará automáticamente.
 
 1. **Entra en Combate:**
    - Simplemente juega con normalidad. El script escucha automáticamente el tráfico de red del juego y comenzará a registrar estadísticas tan pronto como tu Pokémon inflija o reciba daño.
