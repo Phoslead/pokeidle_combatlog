@@ -71,11 +71,9 @@ Este userscript é compatível com qualquer navegador de desktop moderno que exe
 3. Tampermonkey exibirá uma aba de instalação. Clique em **"Install"** (Instalar).
 4. Abra ou recarregue a aba do jogo!
 
-> **Nota:** Este script é atualizado automaticamente graças a este código no cabeçalho:
-> `// @updateURL`
-> `// @downloadURL`
-> 
-> Para desativar as atualizações automáticas, basta apagar essas 2 linhas do script instalado no seu Tampermonkey.
+> **Nota:** As atualizações automáticas estão desativadas por padrão. Se você quiser que o script seja atualizado automaticamente, descomente essas 2 linhas no script instalado no seu Tampermonkey (removendo um conjunto de `//`):
+> `// // @updateURL`
+> `// // @downloadURL`
 
 ---
 

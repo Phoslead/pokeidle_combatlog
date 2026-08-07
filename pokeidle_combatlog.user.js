@@ -7,8 +7,8 @@
 // @match        https://poke.idleworld.online/play
 // @run-at       document-start
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
-// @downloadURL  https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
+// // @updateURL    https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
+// // @downloadURL  https://raw.githubusercontent.com/Phoslead/pokeidle_combatlog/main/pokeidle_combatlog.user.js
 // ==/UserScript==
 
 (function () {
@@ -327,21 +327,22 @@
         */
 
         document.getElementById('cl-reset-stats').addEventListener('click', () => {
-            if (confirm('¿Estás seguro de resetear las estadísticas de esta cacería?')) {
-                resetAllCombatData('Reinicio manual.');
-            }
+            resetAllCombatData('Reinicio manual.');
         });
 
         document.getElementById('cl-minimize-btn').addEventListener('click', (e) => {
             const panel = document.getElementById('combat-stats-panel');
             const actions = document.getElementById('cl-actions-container');
+            const hud = document.getElementById('combat-log-hud');
             if (panel.style.display === 'none') {
                 panel.style.display = 'block';
                 if (actions) actions.style.display = 'flex';
+                if (hud) hud.style.width = '440px';
                 e.target.textContent = '➖';
             } else {
                 panel.style.display = 'none';
                 if (actions) actions.style.display = 'none';
+                if (hud) hud.style.width = 'max-content';
                 e.target.textContent = '➕';
             }
         });

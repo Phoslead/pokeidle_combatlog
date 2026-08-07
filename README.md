@@ -71,11 +71,9 @@ This userscript is compatible with any modern desktop browser running a script m
 3. Tampermonkey will prompt an installation tab. Click **"Install"**.
 4. Open or refresh the game tab!
 
-> **Note:** This script updates automatically thanks to this code in the header:
-> `// @updateURL`
-> `// @downloadURL`
-> 
-> To disable automatic updates, simply delete those 2 lines from the script installed in your Tampermonkey.
+> **Note:** Automatic updates are disabled by default. If you want the script to update automatically, uncomment these 2 lines in the script installed in your Tampermonkey (remove one set of `//`):
+> `// // @updateURL`
+> `// // @downloadURL`
 
 ---
 
