@@ -2,9 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.7] - 2026-08-06
+## [1.8] - 2026-08-06
 ### Added
 - Added `@updateURL` and `@downloadURL` tags to the script header to allow Tampermonkey to automatically pull updates from the GitHub repository.
+
+### Fixed
+- The combat timer will now correctly pause (without resetting to 0) when the player leaves a hunt. This was previously failing because `leave-hunt` is an outgoing packet, not an incoming one.
 
 ## [1.6] - 2026-08-06
 ### Added

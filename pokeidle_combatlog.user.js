@@ -495,6 +495,10 @@
                             resetAllCombatData(`Nueva cacería iniciada (${outPacket.slug || 'hunt'}).`);
                         }
 
+                        if (outPacket.type === 'leave-hunt') {
+                            stopSessionTimer();
+                        }
+
                         if (outPacket.type === 'poke-summon' && outPacket.pokeId) {
                             activePokeId = outPacket.pokeId;
                             registerActiveCombatPoke(activePokeId);
@@ -522,10 +526,6 @@
 
                     if (packet.type === 'enter-hunt') {
                         resetAllCombatData(`Confirmación de cacería (${packet.slug || 'hunt'}).`);
-                    }
-
-                    if (packet.type === 'leave-hunt') {
-                        stopSessionTimer();
                     }
 
                     if (packet.type === 'pokes' && Array.isArray(packet.list)) {
