@@ -742,7 +742,7 @@
                             }
                         }
 
-                        if (activePokeId === 'default' && newActiveId !== 'default') {
+                        if (newActiveId && newActiveId !== 'default' && newActiveId !== activePokeId) {
                             activePokeId = newActiveId;
                         }
 
@@ -798,10 +798,6 @@
                                     });
                                 }
                             }
-                        }
-
-                        if (newActiveId && newActiveId !== activePokeId) {
-                            activePokeId = newActiveId;
                         }
 
                         updateStatsUI();
