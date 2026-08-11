@@ -625,11 +625,12 @@
                     if (typeof data === 'string') {
                         const outPacket = JSON.parse(data);
 
-                        if (outPacket.type === 'enter-hunt') {
-                            currentHunt = outPacket.slug || 'Unknown';
+                        if (outPacket.type === 'enter-hunt' || (typeof outPacket.type === 'string' && outPacket.type.includes('enter') && outPacket.type.includes('boss'))) {
+                            currentHunt = outPacket.slug || outPacket.bossId || outPacket.id || 'Unknown';
                             const huntEl = document.getElementById('cl-current-hunt');
                             if (huntEl) huntEl.textContent = `(${currentHunt})`;
-                            resetAllCombatData(`Nueva cacería iniciada (${outPacket.slug || 'hunt'}).`);
+                            resetAllCombatData(`Nueva cacería iniciada (${currentHunt}).`);
+                            startSessionTimer();
                         }
 
                         if (outPacket.type === 'leave-hunt') {
@@ -663,11 +664,12 @@
                     if (typeof event.data !== 'string') return;
                     const packet = JSON.parse(event.data);
 
-                    if (packet.type === 'enter-hunt') {
-                        currentHunt = packet.slug || 'Unknown';
+                    if (packet.type === 'enter-hunt' || (typeof packet.type === 'string' && packet.type.includes('enter') && packet.type.includes('boss'))) {
+                        currentHunt = packet.slug || packet.bossId || packet.id || 'Unknown';
                         const huntEl = document.getElementById('cl-current-hunt');
                         if (huntEl) huntEl.textContent = `(${currentHunt})`;
-                        resetAllCombatData(`Confirmación de cacería (${packet.slug || 'hunt'}).`);
+                        resetAllCombatData(`Confirmación de cacería (${currentHunt}).`);
+                        startSessionTimer();
                     }
 
                     if (packet.type === 'pokes' && Array.isArray(packet.list)) {
