@@ -725,27 +725,7 @@
                             startSessionTimer();
                         }
 
-                        let newActiveId = activePokeId;
-                        if (packet.bossActiveIdx !== undefined && typeof packet.bossActiveIdx === 'number') {
-                            if (playerTeamIds.length > packet.bossActiveIdx) {
-                                newActiveId = playerTeamIds[packet.bossActiveIdx];
-                            }
-                        } else if (packet.heroName) {
-                            for (const id in pokemonNameMap) {
-                                if (pokemonNameMap[id] === packet.heroName) {
-                                    newActiveId = id;
-                                    const details = pokemonDetailsMap[id];
-                                    if (details && details.stats && details.stats.hp === packet.heroMaxHp) {
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-
-                        if (newActiveId && newActiveId !== 'default' && newActiveId !== activePokeId) {
-                            activePokeId = newActiveId;
-                        }
-
+                        // 1. Procesar los ataques primero en el Pokémon que estaba activo en el turno
                         const currentPoke = registerActiveCombatPoke(activePokeId);
                         const timerTimeStr = getFormattedTimerTime();
 
@@ -798,6 +778,30 @@
                                     });
                                 }
                             }
+                        }
+
+                        // 2. Ahora evaluamos si hubo un cambio de Pokémon
+                        let newActiveId = activePokeId;
+                        if (packet.bossActiveIdx !== undefined && typeof packet.bossActiveIdx === 'number') {
+                            if (playerTeamIds.length > packet.bossActiveIdx) {
+                                newActiveId = playerTeamIds[packet.bossActiveIdx];
+                            }
+                        } else if (packet.heroName) {
+                            for (const id in pokemonNameMap) {
+                                if (pokemonNameMap[id] === packet.heroName) {
+                                    newActiveId = id;
+                                    const details = pokemonDetailsMap[id];
+                                    if (details && details.stats && details.stats.hp === packet.heroMaxHp) {
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        if (newActiveId && newActiveId !== 'default' && newActiveId !== activePokeId) {
+                            activePokeId = newActiveId;
+                            // Registrar el nuevo Pokémon activo para inicializar sus stats si no existen
+                            registerActiveCombatPoke(activePokeId);
                         }
 
                         updateStatsUI();
